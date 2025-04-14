@@ -1,0 +1,6 @@
+{
+  "URL_SERVEUR": "http://localhost:8080/",
+  "URL_AUTH": "/login",
+  "SECRET_KEY" : "2d810cd9-8f64-4328-810c-d98f64a328ba",
+  "WSS_CRYPTO" : "wss://ws.coincap.io/prices?assets=bitcoin,ethereum"
+}

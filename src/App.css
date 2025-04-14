@@ -1,0 +1,147 @@
+body{
+    background-color: rgba(210, 208, 208, 0.98);
+}
+
+#root{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 25px 10%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1001;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+}
+
+ul.navlist{
+    display: flex;
+    align-items: center;
+}
+
+.navlist li{
+    margin-left: 1rem;
+}
+
+.navlist li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 5px 12px;
+    border: 2px solid #90f1f1;
+    border-radius: 25px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.navlist li a:hover,
+.navlist li a:active{
+    box-shadow: 0 0 1rem #12f7ff;
+    background: #12f7ff;
+    color: #1d002c;
+}
+
+.leaflet-container {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    bottom: -20px;
+}
+
+.leaflet-control-zoom{
+    visibility: hidden;
+}
+
+.css-2zd899-MuiResponsiveChart-container {
+    bottom: -20px;
+}
+
+.css-18x62jg-MuiResponsiveChart-container {
+    right: -800px;
+    bottom: -400px;
+}
+
+.login {
+    position: relative;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.login h2 {
+    font-size: 1.8em;
+    color: #fff;
+    text-align: center;
+}
+
+.login .inputBx {
+    position: relative;
+    width: 100%;
+}
+
+.login .inputBx input {
+    position: relative;
+    width: 100%;
+    padding: 10px 0px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font-size: 1em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+    text-align: center;
+}
+
+.login .inputBx input[type="submit"] {
+    width: 100%;
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #026fe8, #2ecaee);
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login .inputBx input::placeholder {
+    color: rgba(255, 255, 255, 0.759);
+}
+
+.login .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.login .links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+}

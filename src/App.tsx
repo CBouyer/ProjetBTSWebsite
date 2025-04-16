@@ -3,6 +3,7 @@ import {useAuthentificationJWTStore} from "./store/AuthentificationJWT.ts";
 import {Outlet} from "react-router";
 import {motion} from 'framer-motion';
 import {Header} from "./component/Header.tsx";
+import {Footer} from "./component/Footer.tsx";
 
 
 export const App = () => {
@@ -20,7 +21,7 @@ export const App = () => {
             >
                 <Header/>
                 <Outlet/>
-                {/* <Footer /> */}
+                <Footer/>
             </motion.div>
         </>
 

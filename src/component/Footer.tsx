@@ -6,14 +6,14 @@ export const Footer =()=>{
             bottom: 0,
             left: 0,
             width: '100%',
-            backgroundColor: '#333', // Couleur de fond
+            backgroundColor: '#1e2b48', // Couleur de fond
             color: '#f9f9f9', // Couleur du texte
             textAlign: 'center', // Texte centré
             padding: '1rem',
             lineHeight: 0,
             zIndex: 1000,
         }}>
-        <p>© 2025 Gestion de l'énergie. Tous droits réservés.</p>
+        <p>© 2025 Enerdis. Tous droits réservés.</p>
         </footer>
     );
 }

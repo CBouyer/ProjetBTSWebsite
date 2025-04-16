@@ -9,6 +9,9 @@ export const Header = () => {
     const goToHome = () => {
         navigate("/home");
     };
+    const goToGestionAdmin=()=>{
+        navigate("/GestionAdmin")
+    }
     return (
         <header
             style={{
@@ -21,6 +24,14 @@ export const Header = () => {
             </span>
             <img src={logoSite} className="logo"/>
             <ul className="navlist">
+                {token?.role === "admin" && (
+                <motion.li
+                    whileHover={{scale: 1.2}}
+                    whileTap={{scale: 0.8}}
+                >
+                    <a onClick={goToGestionAdmin}>Gestion</a>
+                </motion.li>
+                )}
                 <motion.li
                     whileHover={{scale: 1.2}}
                     whileTap={{scale: 0.8}}

@@ -1,12 +1,12 @@
-import {GraphCamembert} from "../component/GraphCamembert.tsx";
 import {Graph} from "../component/Graph.tsx";
+import {useState} from "react";
 
 export const MesuresCapteur=()=>{
-
+    const [data] = useState<{ timestamp: number; value: number }[]>([]);
     return(
         <>
-            <Graph/>
-            <GraphCamembert/>
+            <title>Graphique des données</title>
+            <Graph data={data} />
         </>
     )
 }

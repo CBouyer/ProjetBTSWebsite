@@ -9,9 +9,13 @@ export const Home = () => {
     const { token } = useAuthentificationJWTStore();
     const navigate = useNavigate();
     console.log("🔐 TOKEN depuis le store :", token);
+
     // Stocke la position GPS
     const [position, setPosition] = useState<{ lat: number | null; lon: number | null }>({ lat: null, lon: null });
-
+    const [, setData] = useState<{ timestamp: number; value: number }[]>([]);
+    const handleDataUpdate = (dataPoint: { timestamp: number; value: number }) => {
+        setData((prev) => [...prev, dataPoint]);
+    };
 
     useEffect(() => {
         if (token !== null) {
@@ -21,12 +25,15 @@ export const Home = () => {
 
     return (
         <>
+            <title> Enerdis </title>
             <Header />
+
             <h2 style={{ color: "black" }}>Bienvenue sur le site Enerdis</h2>
-            <div>
-                <h1 style={{ color: "black" }}>🛰️ Suivi en temps réel</h1>
-                <MqttDataComponent onLocationUpdate={setPosition} />
-            </div>
+
+            <MqttDataComponent
+                onLocationUpdate={setPosition}
+                onDataUpdate={handleDataUpdate}
+            />
 
             {token?.role === "admin" && (
                 <Button

@@ -56,25 +56,31 @@ export const Connexion = () => {
     };
 
     return (
+        <>
+            <title>Connexion Enerdis</title>
+
             <div className="login">
                 <h2 style={{
-                    color:"black"
+                    color: "black"
                 }}>Se Connecter</h2>
-                <p style={{ fontWeight: "bold", color: setMessageColor(message) }}>{message}</p>
+                <p style={{fontWeight: "bold", color: setMessageColor(message)}}>{message}</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="inputBx">
-                        <input {...register("login", ValidationConnexion.login)} type="text" placeholder="Username" />
+                        <input {...register("login", ValidationConnexion.login)} type="text" placeholder="Username"/>
                         {errors.login && <span className="error">{errors.login.message}</span>}
                     </div>
                     <div className="inputBx">
-                        <input {...register("password", ValidationConnexion.password)} type="password" placeholder="Password" />
+                        <input {...register("password", ValidationConnexion.password)} type="password"
+                               placeholder="Password"/>
                         {errors.password && <span className="error">{errors.password.message}</span>}
                     </div>
                     <div className="inputBx">
-                        <input type="submit" value="Login" />
+                        <input type="submit" value="Login"/>
                     </div>
                 </form>
             </div>
+        </>
+
     );
 };
 

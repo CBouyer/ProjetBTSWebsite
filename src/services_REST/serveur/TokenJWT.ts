@@ -1,7 +1,8 @@
 import ModToken from "../../models/users/ModToken.ts"
 import axios from "axios"
-import  parametres from "../../../public/parametres.json"
+import parametres from "../../../public/parametres.json"
 import {jwtDecode} from "jwt-decode";
+
 const URL_SERVEUR = parametres.URL_SERVEUR
 const URL_AUTH = parametres.URL_AUTH
 
@@ -14,6 +15,7 @@ export const TokenJWT = async (username: string, password: string): Promise<ModT
     const token = response.data.token.toString(); // ← le string JWT
     console.log("Token brut du serveur:", token);
 
+
     if (!token || typeof token !== "string") {
         console.error("Token invalide ou manquant dans la réponse"); // ca verifie si c'est bien un string
         return null;
@@ -24,6 +26,7 @@ export const TokenJWT = async (username: string, password: string): Promise<ModT
     return new ModToken(
         decoded.id_user,
         decoded.username,
+        decoded.password,
         decoded.role,
         token,
         decoded.exp

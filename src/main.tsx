@@ -10,6 +10,7 @@ import {PrivateRoute} from "./utils/Route.tsx";
 import {Home} from "./pages/Home.tsx";
 import {MesuresCapteur} from "./pages/MesuresCapteur.tsx";
 import {PageMap} from "./pages/PageMap.tsx";
+import {GestionAdmin} from "./pages/GestionAdmin.tsx";
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
             {
                 element: <PrivateRoute/>,
                 children:[
+                    {path:"/GestionAdmin", element:<GestionAdmin/>},
                     {path:"/home", element:<Home/>},
                     {path:"/PageMap", element:<PageMap/>},
                     {path:"/MesureCapteur", element:<MesuresCapteur/>},

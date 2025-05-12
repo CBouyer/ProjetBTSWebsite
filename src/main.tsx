@@ -11,6 +11,7 @@ import {Home} from "./pages/Home.tsx";
 import {MesuresCapteur} from "./pages/MesuresCapteur.tsx";
 import {PageMap} from "./pages/PageMap.tsx";
 import {GestionAdmin} from "./pages/GestionAdmin.tsx";
+import {MesuresCapteurRPI} from "./pages/MesureCapteurRPI.tsx"
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
                     {path:"/home", element:<Home/>},
                     {path:"/PageMap", element:<PageMap/>},
                     {path:"/MesureCapteur", element:<MesuresCapteur/>},
+                    {path: "/MesureCapteurRPI", element:<MesuresCapteurRPI/>}
                 ]
             }
         ],

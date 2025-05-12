@@ -35,7 +35,7 @@ export const Home = () => {
                 onDataUpdate={handleDataUpdate}
             />
 
-            {token?.role === "admin" && (
+            {/*{token?.role === "admin" && ()}*/}
                 <Button
                     style={{
                         borderRadius: "50px",
@@ -53,7 +53,7 @@ export const Home = () => {
                 >
                     Voir la carte
                 </Button>
-            )}
+
         </>
     );
 };

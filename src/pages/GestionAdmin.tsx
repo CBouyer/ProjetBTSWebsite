@@ -24,6 +24,7 @@ export const GestionAdmin = () => {
                 paddingTop: "200px"
             }}>
 
+
                 {/* Section des trois blocs pour administrer les cpateurs les utilisateurs et le prix kwh */}
                 <div style={{
                     display: "flex",

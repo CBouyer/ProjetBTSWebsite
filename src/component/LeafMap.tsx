@@ -16,6 +16,10 @@ export const LeafMap: React.FC<LeafMapProps> = ({latitude, longitude}) => {
         navigate("/MesureCapteur");
     };
 
+    const goToMesureCapteurRPI = () => {
+      navigate("/MesureCapteurRPI")
+    };
+
     return (
         <Box display="flex" flexDirection="row" justifyContent="center" alignItems="flex-start" gap={4} padding={2}>
             {/* Carte à gauche */}
@@ -41,7 +45,7 @@ export const LeafMap: React.FC<LeafMapProps> = ({latitude, longitude}) => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button onClick={goToMesureCapteur}>Voir plus</Button>
+                                    <Button onClick={goToMesureCapteurRPI}>Voir plus</Button>
                                 </CardActions>
                             </Card>
                         </Popup>

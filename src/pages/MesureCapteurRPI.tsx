@@ -12,26 +12,33 @@ import { MqttDataComponent } from "../component/MqttData.tsx";
 
 interface DataPoint {
     timestamp: number;
-    value: number;
+    value: number; // consommation en watts
     formattedDate: string;
+    cost: number;  // coût instantané en euros
 }
 
 export const MesuresCapteurRPI = () => {
     const [dataPoints, setDataPoints] = useState<DataPoint[]>([]);
+    const [totalCost, setTotalCost] = useState<number>(0);
+    const prixKwh = 0.20 * 400; // €/kWh 400 étant la conso moyenne en 1 mois (sinon pas assez representatif sur le graph)
 
     const handleDataUpdate = (dataPoint: { timestamp: number; value: number }) => {
         const formattedDate = new Date(dataPoint.timestamp).toLocaleString("fr-FR", {
-            /*day: "2-digit",
-            month: "2-digit",
-            year: "2-digit",*/
             hour: "2-digit",
-            minute: "2-digit"
+            minute: "2-digit",
+            second: "2-digit"
         });
+
+        // coût en € pour une seconde de consommation
+        const cost = (dataPoint.value / 1000) * prixKwh / 3600;
 
         setDataPoints((prev) => [
             ...prev,
-            { ...dataPoint, formattedDate },
+            { ...dataPoint, formattedDate, cost },
         ]);
+
+        // mettre à jour le coût total
+        setTotalCost((prevTotal) => prevTotal + cost);
     };
 
     return (
@@ -41,10 +48,15 @@ export const MesuresCapteurRPI = () => {
                 onLocationUpdate={() => {}}
             />
 
-            <h2 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>
+            <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>
                 Consommation électrique en temps réel
-            <p> (le graphique s'affichera uniquement a la réception d'informations du capteur)</p>
             </h2>
+            <p>(le graphique s'affichera uniquement à la réception d'informations du capteur)</p>
+
+            <div style={{ marginTop: "1rem", fontSize: "1.2rem", fontWeight: "bold" }}>
+                 Coût total estimé : {totalCost.toFixed(6)} €
+            </div>
+
             <ResponsiveContainer width="100%" height={500}>
                 <LineChart data={dataPoints}>
                     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
@@ -54,9 +66,25 @@ export const MesuresCapteurRPI = () => {
                         textAnchor="end"
                         height={80}
                     />
-                    <YAxis unit="W" />
+                    <YAxis yAxisId="left" unit="W" />
+                    <YAxis yAxisId="right" orientation="right" unit="€" />
                     <Tooltip />
-                    <Line type="monotone" dataKey="value" stroke="#82ca9d" dot />
+                    <Line
+                        yAxisId="left"
+                        type="monotone"
+                        dataKey="value"
+                        stroke="#82ca9d"
+                        dot={false}
+                        name="Consommation (W)"
+                    />
+                    <Line
+                        yAxisId="right"
+                        type="monotone"
+                        dataKey="cost"
+                        stroke="#8884d8"
+                        dot={false}
+                        name="Coût instantané (€)"
+                    />
                 </LineChart>
             </ResponsiveContainer>
         </div>

@@ -58,7 +58,6 @@ export const Connexion = () => {
     return (
         <>
             <title>Connexion Enerdis</title>
-
             <div className="login">
                 <h2 style={{
                     color: "black"
@@ -80,7 +79,6 @@ export const Connexion = () => {
                 </form>
             </div>
         </>
-
     );
 };
 

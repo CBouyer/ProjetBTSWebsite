@@ -1,50 +1,14 @@
-# React + TypeScript + Vite
+# Site WEB pour le projet de fin d'année en BTS ( React , TypeScript , Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CE SITE WEB VA DE PAIRE AVEC LE SERVEUR D'APPLICATION
 
-Currently, two official plugins are available:
+Ce site web a pour fonction de permettre à l'utilisateur de visualiser sur une carte les capteurs d'électricité de son ou ses domicile(s), les données sont récupérées via un cloud TheThingsNetwork où sont stockées des valeurs envoyées depuis un capteur externe, les valeurs sont donc réelles et variables dans le temps.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ce site web permet un affichage différent entre un utilisateur lambda et un administrateur via une page de connexion non contournable (système de routage).
+Un affichage rudimentaire , le but n'étant pas l'esthétique graphique mais bien la partie fonctionnelle. 
+On peut alors visualiser une carte affichant tout les capteurs d'énergies dont l'utilisateur dispose , en connaître la localisation , leur consommation.
+Une page supplémentaire est visualisable si l'on souhaite en savoir plus sur un capteur , avec un graphique retracant la consommation électrique d'une maison en l'occurence.
 
-## Expanding the ESLint configuration
+J'ai utilisé React , TypeScript afin de coder ce site c'était une première pour moi alors il doit sûrement comporter bon nombre de default, si vous souhaitez en discuter n'hesitez pas a me contacter via mail.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Ce site web n'a pas vocation ou prétention à remplacer des sites web d'entreprises existantes mais comme outil d'entrainement et d'apprentissage d'une nouvelle technologie !

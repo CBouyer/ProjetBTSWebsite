@@ -6,7 +6,7 @@
 
 Application web permettant de visualiser sur une carte les capteurs de consommation électrique d'un ou plusieurs domiciles, avec des données réelles remontées via **The Things Network**.
 
-> ⚠️ Ce site fonctionne de pair avec le **serveur d'application** du projet : [lien vers le dépôt du serveur]([https://github.com/CBouyer/NOM_DU_DEPOT_SERVEUR](https://github.com/CBouyer/projetBTS_serveurApplication))
+> ⚠️ Ce site fonctionne de pair avec le **serveur d'application** du projet : [projetBTS_serveurApplication](https://github.com/CBouyer/projetBTS_serveurApplication)
 
 ---
 
@@ -45,12 +45,12 @@ npm run dev
 
 Le site est ensuite accessible à l'adresse indiquée dans le terminal (par défaut `http://localhost:5173`).
 
-## 📸 Aperçu
+## 🔭 Pistes d'amélioration
 
-<!-- Ajoute tes captures d'écran ici, par exemple : -->
-<!-- ![Page de connexion](docs/connexion.png) -->
-<!-- ![Carte des capteurs](docs/carte.png) -->
+- Refonte de l'interface (design, responsive)
+- Tests des composants
+- Gestion plus fine des erreurs réseau
 
-## 💬 À propos
+## 💬 Contact
 
-C'était mon premier projet avec React et TypeScript : le code comporte sûrement des axes d'amélioration. Si vous souhaitez en discuter, n'hésitez pas à me contacter par mail : **corentinbouyer456@gmail.com**
+Mon premier projet en React et TypeScript, réalisé dans le cadre de mon BTS CIEL. Pour en discuter : **corentinbouyer456@gmail.com**

@@ -6,7 +6,7 @@
 
 Application web permettant de visualiser sur une carte les capteurs de consommation électrique d'un ou plusieurs domiciles, avec des données réelles remontées via **The Things Network**.
 
-> ⚠️ Ce site fonctionne de pair avec le **serveur d'application** du projet : [lien vers le dépôt du serveur](https://github.com/CBouyer/NOM_DU_DEPOT_SERVEUR)
+> ⚠️ Ce site fonctionne de pair avec le **serveur d'application** du projet : [lien vers le dépôt du serveur]([https://github.com/CBouyer/NOM_DU_DEPOT_SERVEUR](https://github.com/CBouyer/projetBTS_serveurApplication))
 
 ---
 

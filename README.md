@@ -54,5 +54,3 @@ Le site est ensuite accessible à l'adresse indiquée dans le terminal (par déf
 ## 💬 À propos
 
 C'était mon premier projet avec React et TypeScript : le code comporte sûrement des axes d'amélioration. Si vous souhaitez en discuter, n'hésitez pas à me contacter par mail : **corentinbouyer456@gmail.com**
-
-Ce site n'a pas vocation à remplacer des solutions professionnelles existantes : c'est avant tout un outil d'entraînement et d'apprentissage d'une nouvelle technologie.

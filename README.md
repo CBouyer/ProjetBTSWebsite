@@ -1,14 +1,58 @@
-# Site WEB pour le projet de fin d'année en BTS ( React , TypeScript , Vite)
+# ⚡ Site web – Projet de fin d'année BTS
 
-CE SITE WEB VA DE PAIRE AVEC LE SERVEUR D'APPLICATION
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
 
-Ce site web a pour fonction de permettre à l'utilisateur de visualiser sur une carte les capteurs d'électricités de son ou ses domicile(s), les données sont récupérées via un cloud TheThingsNetwork où sont stockées des valeurs envoyées depuis un capteur externe, les valeurs sont donc réelles et variables dans le temps.
+Application web permettant de visualiser sur une carte les capteurs de consommation électrique d'un ou plusieurs domiciles, avec des données réelles remontées via **The Things Network**.
 
-Ce site web permet un affichage différent entre un utilisateur lambda et un administrateur via une page de connexion non contournable (système de routage).
-Un affichage rudimentaire , le but n'étant pas l'esthétique graphique mais bien la partie fonctionnelle. 
-On peut alors visualiser une carte affichant tout les capteurs d'énergies dont l'utilisateur dispose , en connaître leur localisations , leurs consommations.
-Une page supplémentaire est visualisable si l'on souhaite en savoir plus sur un capteur , avec un graphique retraçant la consommation électrique d'une maison en l'occurence.
+> ⚠️ Ce site fonctionne de pair avec le **serveur d'application** du projet : [lien vers le dépôt du serveur](https://github.com/CBouyer/NOM_DU_DEPOT_SERVEUR)
 
-J'ai utilisé React et TypeScript en majorité afin de coder ce site ,c'était une première pour moi alors il doit sûrement comporter bon nombre de défauts, si vous souhaitez en discuter n'hesitez pas a me contacter via mail.
+---
 
-Ce site web n'a pas vocation ou prétention à remplacer des sites web d'entreprises existantes mais comme outil d'entrainement et d'apprentissage d'une nouvelle technologie !
+## 📋 Présentation
+
+Les données proviennent de capteurs physiques qui envoient leurs mesures sur le cloud The Things Network (TTN). Le site récupère ces valeurs, qui sont donc réelles et évoluent dans le temps.
+
+L'interface est volontairement simple : l'objectif du projet est la partie fonctionnelle plutôt que l'esthétique.
+
+## ✨ Fonctionnalités
+
+- **Authentification obligatoire** : une page de connexion protège l'accès à toutes les pages grâce au système de routage.
+- **Deux profils** : l'affichage diffère selon que l'on est connecté en tant qu'utilisateur ou administrateur.
+- **Carte interactive** : visualisation de tous les capteurs de l'utilisateur, avec leur localisation et leur consommation.
+- **Page de détail par capteur** : graphique retraçant l'historique de la consommation électrique (d'une maison, par exemple).
+
+## 🛠️ Technologies
+
+| Outil | Rôle |
+|-------|------|
+| React | Interface utilisateur |
+| TypeScript | Typage du code |
+| Vite | Serveur de développement et build |
+| The Things Network | Source des données des capteurs |
+
+## 🚀 Installation
+
+Prérequis : [Node.js](https://nodejs.org/) installé, et le serveur d'application lancé.
+
+```bash
+git clone https://github.com/CBouyer/ProjetBTSWebsite.git
+cd ProjetBTSWebsite
+npm install
+npm run dev
+```
+
+Le site est ensuite accessible à l'adresse indiquée dans le terminal (par défaut `http://localhost:5173`).
+
+## 📸 Aperçu
+
+<!-- Ajoute tes captures d'écran ici, par exemple : -->
+<!-- ![Page de connexion](docs/connexion.png) -->
+<!-- ![Carte des capteurs](docs/carte.png) -->
+
+## 💬 À propos
+
+C'était mon premier projet avec React et TypeScript : le code comporte sûrement des axes d'amélioration. Si vous souhaitez en discuter, n'hésitez pas à me contacter par mail : **ton.email@exemple.com**
+
+Ce site n'a pas vocation à remplacer des solutions professionnelles existantes : c'est avant tout un outil d'entraînement et d'apprentissage d'une nouvelle technologie.
